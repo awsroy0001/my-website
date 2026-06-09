@@ -1,0 +1,255 @@
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IKMW Law | Home</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #f8fafc;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      padding: 90px 8%;
+      background: linear-gradient(135deg, #ffffff, #eef2ff);
+    }
+
+    .hero-content {
+      max-width: 760px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      line-height: 1.1;
+      margin: 0 0 20px;
+      color: #111827;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #4b5563;
+      margin: 0 0 30px;
+    }
+
+    .button {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 14px 22px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover {
+      background: #374151;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    .section-gray {
+      background: #f8fafc;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-top: 0;
+      color: #111827;
+    }
+
+    .intro {
+      max-width: 720px;
+      color: #4b5563;
+      font-size: 18px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+      color: #111827;
+    }
+
+    .card p {
+      color: #4b5563;
+    }
+
+    .contact-box {
+      background: #111827;
+      color: white;
+      border-radius: 18px;
+      padding: 42px;
+      max-width: 850px;
+    }
+
+    .contact-box h2 {
+      color: white;
+    }
+
+    .contact-box p {
+      color: #d1d5db;
+      font-size: 18px;
+    }
+
+    .contact-box .button {
+      background: white;
+      color: #111827;
+    }
+
+    footer {
+      padding: 28px 8%;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        display: block;
+      }
+
+      nav {
+        margin-top: 12px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 16px 8px 0;
+      }
+
+      .hero h1 {
+        font-size: 38px;
+      }
+
+      .hero p {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">IKMW Law</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Trusted Advisors.</h1>
+        <p>
+          Seasoned experience in advising clients for collectively more than a decade in California.
+        </p>
+        <a class="button" href="#contact">Get in Touch</a>
+      </div>
+    </section>
+
+    <section id="about" class="section-white">
+      <h2>About</h2>
+      <p class="intro">
+        Based in California, we are dedicated to providing our clients with attentive, professional, and results-driven legal services.
+      </p>
+    </section>
+
+    <section id="services" class="section-gray">
+      <h2>What We Provide</h2>
+      <p class="intro">
+        IKMW Law's attorneys have deep knowledge and extensive experience in California law.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <h3>Litigation</h3>
+          <p>Business Litigation <br> Contract Disputes <br> Insurance Litigation <br> Employment Liability & Discrimination <br> 
+          Personal Injury</p>
+        </div>
+
+        <div class="card">
+          <h3>Transactional</h3>
+          <p>Corporate Transactional <br> Mergers & Acquasition <br>  Prenuptial Agreement <br> Technology Licensing <br> Purchase & Sale </p>
+        </div>
+
+    
+      </div>
+    </section>
+
+    <section id="contact" class="section-white">
+      <div class="contact-box">
+        <h2>Let’s connect.</h2>
+        <p>
+          Interested in learning more? Send us an email and we’ll get back to you.
+        </p>
+        <a class="button" href="mailto:imran@kwptrs.com">Email Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    © 2026 IKMW Law. All rights reserved.
+  </footer>
+
+</body>
+</html>
