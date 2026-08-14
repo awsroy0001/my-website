@@ -1,13 +1,20 @@
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>IKMW Law | Home</title>
 
   <style>
+
     * {
       box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
@@ -18,6 +25,9 @@
       line-height: 1.6;
     }
 
+
+    /* HEADER */
+
     header {
       background: #ffffff;
       border-bottom: 1px solid #e5e7eb;
@@ -25,11 +35,15 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
     .logo {
       font-size: 22px;
       font-weight: 700;
+      color: #111827;
     }
 
     nav a {
@@ -40,21 +54,33 @@
     }
 
     nav a:hover {
-      text-decoration: underline;
+      color: #6b7280;
     }
 
+
+    /* HERO */
+
     .hero {
-      padding: 90px 8%;
       background: linear-gradient(135deg, #ffffff, #eef2ff);
+      padding: 70px 8%;
+    }
+
+    .hero-container {
+      max-width: 1250px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
     }
 
     .hero-content {
-      max-width: 760px;
+      max-width: 650px;
     }
 
     .hero h1 {
-      font-size: 52px;
-      line-height: 1.1;
+      font-size: 56px;
+      line-height: 1.08;
       margin: 0 0 20px;
       color: #111827;
     }
@@ -65,22 +91,38 @@
       margin: 0 0 30px;
     }
 
+    .hero-image img {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.12);
+    }
+
+
+    /* BUTTON */
+
     .button {
       display: inline-block;
       background: #111827;
       color: white;
-      padding: 14px 22px;
+      padding: 14px 24px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
+      transition: 0.2s;
     }
 
     .button:hover {
       background: #374151;
+      transform: translateY(-1px);
     }
 
+
+    /* SECTIONS */
+
     section {
-      padding: 70px 8%;
+      padding: 75px 8%;
     }
 
     .section-white {
@@ -91,22 +133,53 @@
       background: #f8fafc;
     }
 
+    .section-container {
+      max-width: 1250px;
+      margin: auto;
+    }
+
     h2 {
-      font-size: 34px;
+      font-size: 36px;
       margin-top: 0;
+      margin-bottom: 18px;
       color: #111827;
     }
 
     .intro {
-      max-width: 720px;
+      max-width: 760px;
       color: #4b5563;
       font-size: 18px;
     }
 
+
+    /* ABOUT */
+
+    .about-content {
+      max-width: 850px;
+    }
+
+
+    /* SERVICES */
+
+    .services-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .services-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.09);
+    }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 24px;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
       margin-top: 32px;
     }
 
@@ -126,50 +199,128 @@
 
     .card p {
       color: #4b5563;
+      margin-bottom: 0;
+    }
+
+
+    /* CONTACT */
+
+    .contact-layout {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: stretch;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.10);
     }
 
     .contact-box {
       background: #111827;
       color: white;
-      border-radius: 18px;
-      padding: 42px;
-      max-width: 850px;
+      padding: 55px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .contact-box h2 {
       color: white;
+      margin-bottom: 12px;
     }
 
     .contact-box p {
       color: #d1d5db;
       font-size: 18px;
+      max-width: 550px;
     }
 
     .contact-box .button {
       background: white;
       color: #111827;
+      width: fit-content;
+      margin-top: 10px;
     }
 
+    .contact-box .button:hover {
+      background: #f3f4f6;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    /* FOOTER */
+
     footer {
-      padding: 28px 8%;
+      padding: 30px 8%;
       background: #ffffff;
       border-top: 1px solid #e5e7eb;
       color: #6b7280;
       font-size: 14px;
+      text-align: center;
     }
 
+
+    /* MOBILE */
+
+    @media (max-width: 900px) {
+
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero-image img {
+        height: 360px;
+      }
+
+      .services-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .services-image img {
+        height: 350px;
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-image img {
+        height: 320px;
+      }
+    }
+
+
     @media (max-width: 700px) {
+
       header {
         display: block;
+        padding: 16px 6%;
       }
 
       nav {
-        margin-top: 12px;
+        margin-top: 10px;
       }
 
       nav a {
         display: inline-block;
-        margin: 0 16px 8px 0;
+        margin: 0 14px 6px 0;
+      }
+
+      .hero {
+        padding: 55px 6%;
       }
 
       .hero h1 {
@@ -179,77 +330,247 @@
       .hero p {
         font-size: 18px;
       }
+
+      section {
+        padding: 55px 6%;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-box {
+        padding: 35px 28px;
+      }
+
+      .hero-image img,
+      .services-image img {
+        height: 280px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- HEADER -->
+
   <header>
-    <div class="logo">IKMW Law</div>
+
+    <div class="logo">
+      IKMW Law
+    </div>
+
     <nav>
       <a href="#about">About</a>
       <a href="#services">Services</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
+
+
 
   <main>
 
+
+    <!-- HERO -->
+
     <section class="hero">
-      <div class="hero-content">
-        <h1>Trusted Advisors.</h1>
-        <p>
-          Seasoned experience in advising institutional and individual clients in California.
-        </p>
-        <a class="button" href="#contact">Get in Touch</a>
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <h1>Trusted Advisors.</h1>
+
+          <p>
+            Seasoned experience in advising institutional and individual
+            clients in California.
+          </p>
+
+          <a class="button" href="#contact">
+            Get in Touch
+          </a>
+
+        </div>
+
+
+        <div class="hero-image">
+
+          <img
+            src="images/hero.jpg"
+            alt="IKMW Law conference room">
+
+        </div>
+
       </div>
+
     </section>
+
+
+
+    <!-- ABOUT -->
 
     <section id="about" class="section-white">
-      <h2>About</h2>
-      <p class="intro">
-        Based in California, we are dedicated to providing our clients with attentive, professional, and results-driven legal services.
-      </p>
+
+      <div class="section-container">
+
+        <div class="about-content">
+
+          <h2>About</h2>
+
+          <p class="intro">
+            Based in California, we are dedicated to providing our clients
+            with attentive, professional, and results-driven legal services.
+          </p>
+
+        </div>
+
+      </div>
+
     </section>
+
+
+
+    <!-- SERVICES -->
 
     <section id="services" class="section-gray">
-      <h2>What We Provide</h2>
-      <p class="intro">
-        IKMW Law's attorneys have deep knowledge and extensive experience in California law.
-      </p>
 
-      <div class="cards">
-        <div class="card">
-          <h3>Litigation</h3>
-          <p>Business Litigation <br> Contract Disputes <br> Insurance Litigation <br> Employment Liability & Discrimination <br> 
-          Personal Injury</p>
+      <div class="section-container">
+
+        <div class="services-layout">
+
+
+          <!-- BUILDING IMAGE -->
+
+          <div class="services-image">
+
+            <img
+              src="images/service-1.jpg"
+              alt="Commercial building">
+
+          </div>
+
+
+
+          <!-- SERVICES TEXT -->
+
+          <div>
+
+            <h2>What We Provide</h2>
+
+            <p class="intro">
+              IKMW Law's attorneys have deep knowledge and extensive
+              experience in California law.
+            </p>
+
+
+            <div class="cards">
+
+
+              <div class="card">
+
+                <h3>Litigation</h3>
+
+                <p>
+                  Business Litigation<br>
+                  Contract Disputes<br>
+                  Insurance Litigation<br>
+                  Employment Liability &amp; Discrimination<br>
+                  Personal Injury
+                </p>
+
+              </div>
+
+
+
+              <div class="card">
+
+                <h3>Transactional</h3>
+
+                <p>
+                  Corporate Transactions<br>
+                  Mergers &amp; Acquisitions<br>
+                  Prenuptial Agreements<br>
+                  Technology Licensing<br>
+                  Purchase &amp; Sale
+                </p>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="card">
-          <h3>Transactional</h3>
-          <p>Corporate Transactional <br> Mergers & Acquasition <br>  Prenuptial Agreement <br> Technology Licensing <br> Purchase & Sale </p>
-        </div>
-
-    
       </div>
+
     </section>
+
+
+
+    <!-- CONTACT -->
 
     <section id="contact" class="section-white">
-      <div class="contact-box">
-        <h2>Let’s connect.</h2>
-        <p>
-          Interested in learning more? Send us an email and we’ll get back to you.
-        </p>
-        <a class="button" href="mailto:imran@kwptrs.com">Email Us</a>
+
+      <div class="contact-layout">
+
+
+        <div class="contact-box">
+
+          <h2>Let’s connect.</h2>
+
+          <p>
+            Interested in learning more? Send us an email and
+            we’ll get back to you.
+          </p>
+
+          <a
+            class="button"
+            href="mailto:imran@kwptrs.com">
+            Email Us
+          </a>
+
+        </div>
+
+
+
+        <!-- CLIENT IMAGE -->
+
+        <div class="contact-image">
+
+          <img
+            src="images/service-2.jpg"
+            alt="Client">
+
+        </div>
+
+
       </div>
+
     </section>
 
+
   </main>
+
+
+
+  <!-- FOOTER -->
 
   <footer>
     © 2026 IKMW Law. All rights reserved.
   </footer>
 
+
 </body>
-</html>
