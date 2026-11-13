@@ -1,0 +1,383 @@
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IKMW Law | Attorney Profile</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #1f2937;
+      background: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 20px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo a {
+      font-size: 22px;
+      font-weight: 700;
+      color: #111827;
+      text-decoration: none;
+    }
+
+    nav a {
+      margin-left: 24px;
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #6b7280;
+    }
+
+    .profile-hero {
+      padding: 80px 8%;
+      background: linear-gradient(135deg, #ffffff, #eef2ff);
+    }
+
+    .profile-container {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .profile-photo img {
+      width: 100%;
+      height: 470px;
+      object-fit: cover;
+      object-position: center top;
+      border-radius: 16px;
+      box-shadow: 0 16px 45px rgba(0, 0, 0, 0.12);
+    }
+
+    .profile-content h1 {
+      margin: 0 0 14px;
+      font-size: 46px;
+      line-height: 1.12;
+      color: #111827;
+    }
+
+    .profile-title {
+      font-size: 24px;
+      line-height: 1.4;
+      color: #4b5563;
+      font-weight: 600;
+      max-width: 720px;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    .section-white {
+      background: #ffffff;
+    }
+
+    .section-gray {
+      background: #f8fafc;
+    }
+
+    .content-container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #111827;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 18px;
+    }
+
+    p {
+      color: #4b5563;
+      font-size: 18px;
+    }
+
+    .bio-text {
+      max-width: 850px;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 10px;
+    }
+
+    .detail-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    }
+
+    .detail-card h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      color: #111827;
+      font-size: 22px;
+    }
+
+    .detail-card ul {
+      margin: 0;
+      padding-left: 20px;
+      color: #4b5563;
+      font-size: 17px;
+    }
+
+    .detail-card li {
+      margin-bottom: 8px;
+    }
+
+    .interests-box {
+      background: #111827;
+      color: white;
+      border-radius: 18px;
+      padding: 42px;
+    }
+
+    .interests-box h2 {
+      color: white;
+    }
+
+    .interests-box p {
+      color: #d1d5db;
+      margin-bottom: 0;
+    }
+
+    footer {
+      padding: 30px 8%;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .profile-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .profile-photo {
+        max-width: 420px;
+      }
+
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .profile-content h1 {
+        font-size: 40px;
+      }
+    }
+
+    @media (max-width: 700px) {
+      header {
+        display: block;
+        padding: 16px 6%;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
+      nav a {
+        display: inline-block;
+        margin: 0 14px 6px 0;
+      }
+
+      .profile-hero,
+      section {
+        padding: 55px 6%;
+      }
+
+      .profile-photo img {
+        height: 420px;
+      }
+
+      .profile-content h1 {
+        font-size: 34px;
+      }
+
+      .profile-title {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html">IKMW Law</a>
+    </div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- PROFILE HEADER -->
+
+    <section class="profile-hero">
+
+      <div class="profile-container">
+
+        <div class="profile-photo">
+          <img
+            src="images/attorney1.jpeg"
+            alt="Attorney profile photo">
+        </div>
+
+        <div class="profile-content">
+
+          <h1>Attorney Name</h1>
+
+          <div class="profile-title">
+            California Regional Managing Partner &amp; International Relations
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- BIOGRAPHY -->
+
+    <section class="section-white">
+
+      <div class="content-container">
+
+        <h2>Biography</h2>
+
+        <div class="bio-text">
+          <p>
+            BIO
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ADMISSIONS + EDUCATION -->
+
+    <section class="section-gray">
+
+      <div class="content-container">
+
+        <div class="details-grid">
+
+          <div class="detail-card">
+
+            <h3>Admissions</h3>
+
+            <ul>
+              <li>admin 1</li>
+              <li>admin 2</li>
+            </ul>
+
+          </div>
+
+
+          <div class="detail-card">
+
+            <h3>Education</h3>
+
+            <ul>
+              <li>ed 1</li>
+              <li>ed 2</li>
+            </ul>
+
+          </div>
+
+
+          <div class="detail-card">
+
+            <h3>Interests</h3>
+
+            <p>
+              Interests
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- INTERESTS FEATURE -->
+
+    <section class="section-white">
+
+      <div class="content-container">
+
+        <div class="interests-box">
+
+          <h2>Interests</h2>
+
+          <p>
+            Interests
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 IKMW Law. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
+```
